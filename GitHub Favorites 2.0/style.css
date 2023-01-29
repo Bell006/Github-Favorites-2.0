@@ -1,0 +1,177 @@
+:root {
+    font-size: 62.5%;
+    
+    --bg-color: #000;
+    --primary-tt-color: white;
+    --remove-tt-color: #F75A68;
+    --table-head-color: #092D38;
+    --primary-color:  #06181C;
+    --secondary-color: rgba(6, 22, 27, 0.5);
+    --tertiary-color: #065E7C;
+    --border-color: #4A808C;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-size: 1.6rem;
+    font-family: 'Roboto';
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--primary-tt-color);
+
+    max-width: 112rem;
+    margin: 0 auto;
+
+
+    
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin: 11.5rem 0 8.5rem;
+    
+}
+
+.hide {
+    display: none;
+    opacity: none;
+}
+
+.search {
+    display: flex;
+    gap: .8rem
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+		clip: rect(0,0,0,0);
+    white-space: nowrap;
+		border-width: 0;
+}
+
+input {
+    width: 46rem;
+    padding: 1rem;
+    
+    color: var(--primary-tt-color);
+
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: .5rem;
+}
+
+.search-button {
+    border: none;
+    background-color: var(--tertiary-color);
+    color: var(--primary-tt-color);
+    border-radius: .5rem;
+    
+    font-family: 'Roboto';
+    font-weight: 700;
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+    text-transform: uppercase;
+
+    display: flex;
+    align-items: center;
+    padding: 1.2rem 3.2rem;
+    gap: .8rem;
+}
+
+.search-button:hover {
+    cursor: pointer;
+    background-color: var(--primary-tt-color);
+    color: var(--tertiary-color);
+}
+
+table {
+
+    font-size: 2rem;
+
+    width: 100%;
+    border-collapse: collapse; /*tira os espaços da table */
+
+    box-shadow: 0 1rem 2rem -1rem rgba(0, 0, 0, 0.3);
+}
+    
+thead th {
+    background-color: var(--table-head-color);
+    padding: 1.6rem 2rem 1.6rem 4rem;
+    text-align: left;
+
+}
+
+td {
+    padding: 2.4rem 4rem;
+}
+
+tbody tr {
+    border: 1px solid var(--border-color) ;
+}
+
+table th:first-child {
+    border-top-left-radius: .8rem;
+}
+
+table th:last-child {
+    border-top-right-radius: .8rem;
+}
+
+tr.user td:first-child {
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+}
+
+img {   
+    width: 5.6rem;
+    height: 5.6rem;
+
+    border-radius: 50%;
+}
+
+a {
+    color: var(--primary-tt-color);
+    text-decoration: none;
+}
+
+p {
+    font-weight: 700;
+    margin-bottom: .5rem;
+}
+
+table tr:nth-child(odd) {
+    background-color: var(--secondary-color);
+}
+
+table tr:nth-child(even) {
+    background-color: var(--primary-color);
+}
+
+.RemoveUserButton {
+    background: none;
+    border: none;
+    color: var(--remove-tt-color);
+
+    font-weight: 700;
+}
+
+.RemoveUserButton:hover {
+    cursor: pointer;
+}
+
+
